@@ -4,18 +4,25 @@ let items = JSON.parse(items_JSON);
 
 let container = document.getElementById("items_container")
 
-for (let i = 0; i<items.length;i++){
-    container.insertAdjacentHTML("beforeend", `
-    <div class="item">
-                <h1 class="item_title">${items[i].item_name}</h1>
-                <p>${items[i].item_description}</p>
-                <img style="width: 200px;" src="${items[i].item_link}" alt=""><br>
-                <button class="item_button" item_name="${items[i].item_name}">Remove</button>
-            </div>
-    `)
-    document.body.getElementsByClassName(`item_button`)[i].addEventListener('click', RemoveItem)
-}
+if (items.length == 0){
+    document.getElementById("items_title").innerHTML = `<h2 style="color: red;" class="item_title">Please Select an Item</h2>`
+}else{
+    for (let i = 0; i<items.length;i++){
+        container.insertAdjacentHTML("beforeend", `
+        <div class="item" style="display: grid;
+        background-color: rgb(243, 162, 162);
+        padding: 30px;
+        max-width: 50vw">
+                    <h1 class="item_title">${items[i].item_name}</h1>
+                    <p>${items[i].item_description}</p>
+                    <img style="width: 200px;" src="${items[i].item_link}" alt=""><br>
+                    <button class="item_button" item_name="${items[i].item_name}">Remove</button>
+                </div>
+        `)
+        document.body.getElementsByClassName(`item_button`)[i].addEventListener('click', RemoveItem)
+    }
 
+}    
 
 function RemoveItem(){
     // console.log("remove", this)
