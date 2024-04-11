@@ -1,10 +1,46 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        <h1>Choose a pokemon</h1>
+      <nav>
+        <a href="index.html">Home</a><a href="selection.html">Selection</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="grid_container">
+        <div class="item">
+            <h1 class="item_title">Charizard</h1>
+            <p>A fire type Pokemon</p>
+            <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/600px-0006Charizard.png" alt=""><br>
+            <button class="item_button" item_name="Charizard" item_description="A fire type Pokemon" item_link="https://archives.bulbagarden.net/media/upload/thumb/3/38/0006Charizard.png/600px-0006Charizard.png">Choose</button>
+        </div>
+        <div class="item">
+            <h1 class="item_title">Bulbasaur</h1>
+            <p>A grass type Pokemon</p>
+            <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/250px-0001Bulbasaur.png" alt=""><br>
+            <button class="item_button" item_name="Bulbasaur" item_description="A grass type Pokemon" item_link="https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/250px-0001Bulbasaur.png">Choose</button>
+        </div>
+        <div class="item">
+            <h1 class="item_title">Pikachu</h1>
+            <p>An electric type Pokemon</p>
+            <img style="width: 200px;" src="https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png" alt=""><br>
+            <button class="item_button" item_name="Pikachu" item_description="An electric type Pokemon" item_link="https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png">Choose</button>
+        </div>
+
+
+
+
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
